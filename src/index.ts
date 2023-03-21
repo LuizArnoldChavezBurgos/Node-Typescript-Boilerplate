@@ -8,8 +8,12 @@ import loginRoute from '@/infraestructure/routes/login.route';
 
 app.use(bodyParser.json());
 
+app.get('/', (_req, res) => {
+    res.send('Hello World!');
+});
+
 app.use('/login', loginRoute);
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log('Server started on port 3000');
 });
